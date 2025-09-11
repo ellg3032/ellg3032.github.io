@@ -1,0 +1,108 @@
+/* Colors:
+Dark Purple: #4E0250
+Magenta: #801A86
+Light Green: #8AC926
+Dark Green: #036D19
+*/
+
+html {
+  font-family: "chamfer-gothic-ludlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "rl-folklor", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+p {
+  font-size: 32px;
+  text-align: center;
+}
+
+.small-text {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 56px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #036d19;
+  font-size: 32px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #8ac926;
+}
+
+button {
+  background-color: #036d19;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  font-family: "chamfer-gothic-ludlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+button:hover {
+  background-color: #8ac926;
+  color: black;
+}
+
+.navbutton {
+  width: 25%;
+  margin: 0px;
+  border: 0px;
+  line-height: 100%;
+  font-size: 56px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  font-size: 0px;
+  margin:0px;
+  padding:0px;
+}
+
+#box1 {
+  background-color: #4e0250;
+  color: white;
+}
+
+main{
+    background-color: #2251AA;
+    color:white;
+    padding: 0px;
+    margin:0px;
+}
