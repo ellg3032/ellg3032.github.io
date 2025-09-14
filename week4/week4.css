@@ -1,8 +1,10 @@
 /* Colors:
-Dark Purple: #4E0250
-Magenta: #801A86
-Light Green: #8AC926
-Dark Green: #036D19
+020202
+0d2818
+04471c
+058c42
+16db65 (only one with black text)
+(i changed my color scheme since the ica)
 */
 
 html {
@@ -43,7 +45,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #036d19;
+  color: #036d19; /*change this*/
   font-size: 32px;
 }
 
@@ -52,11 +54,11 @@ a:hover {
 }
 
 a:visited {
-  color: #8ac926;
+  color: #8ac926; /*change this*/
 }
 
 button {
-  background-color: #036d19;
+  background-color: #020202;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -72,8 +74,8 @@ button {
 }
 
 button:hover {
-  background-color: #8ac926;
-  color: black;
+  background-color: #0d2818;
+  color: white;
 }
 
 .navbutton {
@@ -87,22 +89,31 @@ button:hover {
 body {
   margin: 0px;
   padding: 0px;
+  background-color: #04471c;
 }
 
 nav {
   font-size: 0px;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-#box1 {
-  background-color: #4e0250;
+main {
   color: white;
+  padding: 0px;
+  margin: 0px;
 }
 
-main{
-    background-color: #2251AA;
-    color:white;
-    padding: 0px;
-    margin:0px;
+.myname {
+  font-size: 112px;
+  padding: 56px;
+}
+
+.projectphotos {
+  width: 25%;
+  height: 25%;
+}
+
+ul {
+  font-size: 32px;
 }
