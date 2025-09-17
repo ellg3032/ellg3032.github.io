@@ -1,0 +1,19 @@
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    border-radius: 30%;
+    width:20%;
+    height: 5%;
+}
+
+.card-content {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
