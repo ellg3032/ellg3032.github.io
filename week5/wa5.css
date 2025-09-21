@@ -1,0 +1,88 @@
+@font-face {
+  font-family: jetLag;
+  src: url(Fonts/DIN\ Next\ LT\ Arabic\ Bold.woff);
+}
+
+html {
+  color: white;
+  font-family: jetLag;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #263343;
+  padding: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 0.2;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-brand {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.nav-menu li {
+  list-style: none;
+  align-content: center;
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+  margin: 5px;
+}
+
+.nav-menu li a {
+  transition-duration: 0.2s;
+  color: white;
+}
+
+.nav-menu li a:hover {
+  color: red;
+  transition-duration: 0.2s;
+}
+
+body {
+  background-color: #263343;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 500px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: #000000;
+    height: 6px;
+    width: 40px;
+    border-radius: 20px;
+    padding: 0;
+    margin: 3px;
+  }
+}
