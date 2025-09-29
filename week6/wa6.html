@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jet Lag Home</title>
+    <link rel="stylesheet" href="wa6.css" />
+  </head>
+  <body>
+    <section class="homeGrid">
+      <nav class="main-nav">
+        <div class="nav-brand">Jet Lag The Game</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu hide">
+          <li><a href="wa6.html">Home</a></li>
+          <li><a href="#resources">Game Map</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="#contact">Messaging</a></li>
+        </ul>
+      </nav>
+      <div class="logo" aria-label="Logo">
+        <img src="Images/logo.webp" alt="Jet Lag Logo" />
+      </div>
+    </section>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navToggle.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        var shown = navMenu.classList.toggle("show");
+        navMenu.classList.toggle("hide");
+
+        if (shown) {
+          navToggle.setAttribute("aria-expanded", "true");
+          navToggle.style.transform = "rotate(180deg)";
+        } else {
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.style.transform = "rotate(0deg)";
+        }
+      }
+      
+    </script>
+  </body>
+</html>

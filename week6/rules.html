@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rules</title>
+    <link rel="stylesheet" href="wa6.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-brand">Jet Lag The Game</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu hide">
+        <li><a href="wa6.html">Home</a></li>
+        <li><a href="#resources">Game Map</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="#contact">Messaging</a></li>
+      </ul>
+    </nav>
+    <div class="ruleGrid">
+      <section class="SeekerSection Rules">
+        <button class="seekerHeader"><h2>Seeker Rules</h2></button>
+        <section class="seeker-rules rules-section">
+          <div class="rules-card seeker">
+            <h2>a</h2>
+            <p>a</p>
+          </div>
+        </section>
+      </section>
+      <section class="HiderSection Rules">
+        <button class="hiderHeader"><h2>Hider Rules</h2></button>
+        <section class="hider-rules rules-section">
+          <div class="rules-card hider">
+            <h2>a</h2>
+            <p>a</p>
+          </div>
+        </section>
+      </section>
+      <section class="QuestionsSection Rules">
+        <button class="questionsHeader"><h2>Questions</h2></button>
+        <section class="question-rules rules-section">
+          <div class="rules-card question">
+            <h2>a</h2>
+            <p>a</p>
+          </div>
+        </section>
+      </section>
+      <section class="CursesSection Rules">
+        <button class="cursesHeader"><h2>Curses</h2></button>
+        <section class="curse-rules rules-section">
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Luxury Car</h2>
+            <p class="curse-content">Take a photo of a car. The seekers must take a photo of a more expensive car before asking another question.</p>
+            <p class="curse-cost">Casting cost: A photo of a car.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Urban Explorer</h2>
+            <p class="curse-content">For the rest of your run, seekers cannot ask questions when they are on transit or in a transit station</p>
+            <p class="curse-cost">Casting cost: Discard 2 cards.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Bridge Troll</h2>
+            <p class="curse-content">The seekers must ask their next question from under a bridge.</p>
+            <p class="curse-cost">Casting Cost: Seekers must be at least 5 miles from you.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Overflowing Chalice</h2>
+            <p class="curse-content">For the next three questions, you may draw (not keep) an additional card when drawing from the hider deck.</p>
+            <p class="curse-cost">Casting Cost: Discard a card.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Drained Brain</h2>
+            <p class="curse-content">Choose three questions in different categories. The seekers cannot ask those questions for the rest of your run.</p>
+            <p class="curse-cost">Casting Cost: Discard your hand.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Bird Guide</h2>
+            <p class="curse-content">You have one chance to film a bird for as long as possible, up to 10 minutes straight. If, at any point, the bird leaves the frame, your timer is stopped. The seekers must then film a bird for the same amount of time or longer before asking another question.</p>
+            <p class="curse-cost">Casting Cost: Film a bird.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of Water Weight</h2>
+            <p class="curse-content">The seekers must acquire and carry at least 2 liters of liquid per seeker for the rest of your run. They cannot ask another question until they have acquired the liquid. The water may be distributed between seekers as they see fit. If the liquid is lost or abandoned at any point after acquisition, the hider is awarded a 30 minutes bonus.</p>
+            <p class="curse-cost">Casting Cost: Seekers must be within 1,000 feet (300 meters) of a body of water.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Zoologist</h2>
+            <p class="curse-content">Take a photo of a wild fish, bird, mammal, reptile, amphibian, or bug. The seekers must take a picture of a wild animal in the same category before asking another question.</p>
+            <p class="curse-cost">Casting Cost: A photo of an animal.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The U-Turn</h2>
+            <p class="curse-content">The seeker must disembark their current mode of transportation at the next station (as long as that station is serviced by another form of transit in the next 0.5 hours.)</p>
+            <p class="curse-cost">Casting Cost: Seekers must be heading the wrong way. (Their next station is further from you than they are.)</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The Labyrinth</h2>
+            <p class="curse-content">Spend up to 20 minutes drawing a solvable maze and send a photo of it to the seekers. You cannot use the internet to research maze designs. The seekers must solve the maze before asking another question.</p>
+            <p class="curse-cost">Casting Cost: Draw a maze.</p>
+          </div>
+          <div class="rules-card curse">
+            <h2 class="curse-title">Curse Of The </h2>
+            <p class="curse-content"></p>
+            <p class="curse-cost">Casting Cost: </p>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script>
+      const seekerhead = document.querySelector(".seekerHeader");
+      const seekerDetails = document.querySelector(".seeker-rules");
+      const hiderhead = document.querySelector(".hiderHeader");
+      const hiderDetails = document.querySelector(".hider-rules");
+      const questionshead = document.querySelector(".questionsHeader");
+      const questionsDetails = document.querySelector(".question-rules");
+      const curseshead = document.querySelector(".cursesHeader");
+      const cursesDetails = document.querySelector(".curse-rules");
+      let seekerShown = false;
+      let hiderShown = false;
+      let questionsShown = false;
+      let cursesShown = false;
+
+      addEventListener("keydown", showRules);
+
+      seekerhead.addEventListener("click", showSeeker);
+      hiderhead.addEventListener("click", showHider);
+      questionshead.addEventListener("click", showQuestions);
+      curseshead.addEventListener("click", showCurses);
+
+      function showRules(event) {
+        if (event.key == "s") {
+          showSeeker();
+        } else if (event.key == "c") {
+          showCurses();
+        } else if (event.key == "h") {
+          showHider();
+        } else if (event.key == "q") {
+          showQuestions();
+        }
+      }
+
+      function showSeeker() {
+        if (seekerShown == false) {
+          seekerDetails.style.display = "block";
+          seekerShown = true;
+        } else {
+          seekerDetails.style.display = "none";
+          seekerShown = false;
+        }
+      }
+
+      function showQuestions() {
+        if (questionsShown == false) {
+          questionsDetails.style.display = "block";
+          questionsShown = true;
+        } else {
+          questionsDetails.style.display = "none";
+          questionsShown = false;
+        }
+      }
+
+      function showHider() {
+        if (hiderShown == false) {
+          hiderDetails.style.display = "block";
+          hiderShown = true;
+        } else {
+          hiderDetails.style.display = "none";
+          hiderShown = false;
+        }
+      }
+
+      function showCurses() {
+        if (cursesShown == false) {
+          cursesDetails.style.display = "block";
+          cursesShown = true;
+        } else {
+          cursesDetails.style.display = "none";
+          cursesShown = false;
+        }
+      }
+    </script>
+  </body>
+</html>
