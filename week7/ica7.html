@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jet Lag Home</title>
+    <link rel="stylesheet" href="ica7.css" />
+  </head>
+  <body>
+    <section class="homeGrid">
+      <nav class="main-nav">
+        <div class="nav-brand">Jet Lag The Game</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu hide">
+          <li><a href="ica7.html">Home</a></li>
+          <li><a href="#resources">Game Map</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="#contact">Messaging</a></li>
+        </ul>
+      </nav>
+      <div class="logo" aria-label="Logo">
+        <img src="Images/logo.webp" alt="Jet Lag Logo" />
+      </div>
+    </section>
+
+    <button id="map_size" type="button">Small</button>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navToggle.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        var shown = navMenu.classList.toggle("show");
+        navMenu.classList.toggle("hide");
+
+        if (shown) {
+          navToggle.setAttribute("aria-expanded", "true");
+          navToggle.style.transform = "rotate(180deg)";
+        } else {
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.style.transform = "rotate(0deg)";
+        }
+      }
+
+      const btn = document.querySelector("#map_size");
+
+      btn.addEventListener("click", setTheme);
+
+      // Load saved theme on page load
+      window.addEventListener("load", function () {
+        const savedTheme = localStorage.getItem("userTheme") || "s";
+        document.body.className = savedTheme;
+        if(savedTheme == "s") {
+          btn.innerHTML = "Small";
+        }
+        else if(savedTheme == "m") {
+          btn.innerHTML = "Medium";
+        }
+        else {
+          btn.innerHTML = "Large";
+        }
+      });
+
+      // Save user's theme choice
+      function setTheme() {
+        let map_size = "temp";
+        if (btn.innerText == "Small") {
+          map_size = "s";
+        } else if (btn.innerText == "Medium") {
+          map_size = "m";
+        } else {
+          map_size = "l";
+        }
+
+        if(map_size == "s") {
+          console.log("s triggered");
+          let theme = "m";
+          localStorage.setItem("userTheme", theme);
+          document.body.className = theme;
+          btn.innerHTML = "Medium";
+        } else if(map_size == "m") {
+          console.log("m triggered");
+          let theme = "l";
+          localStorage.setItem("userTheme", theme);
+          document.body.className = theme;
+          btn.innerHTML = "Large";
+        } else {
+          console.log("else triggered");
+          let theme = "s";
+          localStorage.setItem("userTheme", theme);
+          document.body.className = theme;
+          btn.innerHTML = "Small";
+        }
+      }
+    </script>
+  </body>
+</html>
