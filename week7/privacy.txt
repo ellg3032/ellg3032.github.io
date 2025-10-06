@@ -1,0 +1,4 @@
+All the data this website collects is your choice of font size.
+It is collected because it allows for users to not have to repick the size every time.
+Data is stored until the user presses the clear preferences button on their own computer.
+At any time the user can hit clear preferences to remove this data.
