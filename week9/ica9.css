@@ -1,0 +1,61 @@
+.animated-button {
+  width: 200px;
+  height: 100px;
+  animation-name: click;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  background-color: green;
+  font-size: 20px;
+  border-radius: 10px;
+  transition-duration: 1s;
+}
+
+.animated-button:hover {
+    animation-play-state: paused;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 200px;
+}
+
+@keyframes click {
+  from {
+    transform: rotate(0deg);
+    background-color: green;
+    font-size: 20px;
+    width: 200px;
+  }
+
+  25% {
+    transform: rotate(50deg);
+    background-color: red;
+    font-size: 40px;
+    width: 250px;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    background-color: green;
+    font-size: 20px;
+    width: 200px;
+  }
+
+  75% {
+    transform: rotate(-50deg);
+    background-color: red;
+    font-size: 40px;
+    width: 250px;
+  }
+
+  to {
+    transform: rotate(0deg);
+    background-color: green;
+    font-size: 20px;
+    width: 200px;
+  }
+}
