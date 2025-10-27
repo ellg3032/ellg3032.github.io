@@ -119,6 +119,10 @@ header {
   background-color: darkred;
 }
 
+p{
+  padding:10px;
+}
+
 @media screen and (max-width: 600px) {
   .app {
     width: 100%;
