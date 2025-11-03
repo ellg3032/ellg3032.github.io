@@ -1,0 +1,29 @@
+#interface {
+    height: 1fr;
+    width: .5fr;
+    margin-top: 100px;
+    background-color: tan;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inputs {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#PosterImg {
+    margin: 50px;
+}
+
+#title {
+    align-self: center;
+}
