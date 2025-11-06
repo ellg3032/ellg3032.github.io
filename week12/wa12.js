@@ -36,11 +36,13 @@ async function func() {
     const json = await response.json();
     if (json["Error"]) {
       alert(json["Error"]);
+      img.src = "Images/error.png"
     } else {
       img.src = json["Poster"];
       localStorage.setItem("current_poster", json["Poster"]);
     }
   } catch (err) {
+    
     console.log(err);
     alert("Failed to get movie");
   }
