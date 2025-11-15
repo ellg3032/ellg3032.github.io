@@ -62,8 +62,8 @@ async function func() {
       throw Error(response.statusText);
     }
     const json = await response.json();
-    console.log("original json");
-    console.log(json);
+    //console.log("original json");
+    //console.log(json["Search"][3]);
     if (json["Error"]) {
       alert(json["Error"]);
     } else {
@@ -80,41 +80,64 @@ async function func() {
         json["Search"][i] = json2;
       }
       loadresults(json);
+      showresults(json);
       localStorage.setItem("current_poster", json["Search"][0]["Poster"]);
     }
   } catch (err) {
     console.log(err);
     alert("Failed to get movie");
   }
-  showresults();
 }
 
-function showresults() {
-  for(let i = 0; i < 10; i++)
-  {
-    results[i].classList.add("shown");
-    results[i].classList.remove("hidden");
+function showresults(json) {
+  document.getElementById("results").classList.add("shown");
+  document.getElementById("results").classList.remove("hidden");
+  for (let i = 0; i < 10; i++) {
+    if (json["Search"][i]["Error"]) {
+      results[i].classList.remove("shown");
+      results[i].classList.add("hidden");
+    } else {
+      results[i].classList.add("shown");
+      results[i].classList.remove("hidden");
+    }
   }
 }
 
 function loadresults(json) {
-  console.log(json["Search"][0]);
   for (let i = 0; i < 10; i++) {
     results[i].children[0].children[0].src = json["Search"][i]["Poster"];
-    results[i].children[0].children[1].children[0].textContent = json["Search"][i]["Title"];
-    results[i].children[0].children[1].children[1].children[0].textContent = json["Search"][i]["Year"];
-    results[i].children[0].children[1].children[1].children[2].textContent = json["Search"][i]["Rated"];
+    results[i].children[0].children[1].children[0].textContent =
+      json["Search"][i]["Title"];
+    results[i].children[0].children[1].children[1].children[0].textContent =
+      json["Search"][i]["Year"];
+    results[i].children[0].children[1].children[1].children[2].textContent =
+      json["Search"][i]["Rated"];
     if (json["Search"][i]["Type"] == "series") {
-      console.log("this is a series");
-      results[i].children[0].children[1].children[1].children[3].textContent = "TV Series";
-      results[i].children[0].children[1].children[1].children[1].classList.add("hidden");
-      results[i].children[0].children[1].children[1].children[1].classList.remove("shown");
+      results[i].children[0].children[1].children[1].children[3].textContent =
+        "TV Series";
+      results[i].children[0].children[1].children[1].children[1].classList.add(
+        "hidden"
+      );
+      results[
+        i
+      ].children[0].children[1].children[1].children[1].classList.remove(
+        "shown"
+      );
     } else {
-      results[i].children[0].children[1].children[1].children[3].textContent = json["Search"][i]["Metascore"] + " Metascore";
-      results[i].children[0].children[1].children[1].children[1].classList.add("shown");
-      results[i].children[0].children[1].children[1].children[1].classList.remove("hidden");
-      results[i].children[0].children[1].children[1].children[1].textContent = json["Search"][i]["Runtime"];
+      results[i].children[0].children[1].children[1].children[3].textContent =
+        json["Search"][i]["Metascore"] + " Metascore";
+      results[i].children[0].children[1].children[1].children[1].classList.add(
+        "shown"
+      );
+      results[
+        i
+      ].children[0].children[1].children[1].children[1].classList.remove(
+        "hidden"
+      );
+      results[i].children[0].children[1].children[1].children[1].textContent =
+        json["Search"][i]["Runtime"];
     }
-    results[i].children[0].children[1].children[2].children[0].textContent = json["Search"][i]["imdbRating"] + " Stars";
+    results[i].children[0].children[1].children[2].children[0].textContent =
+      json["Search"][i]["imdbRating"] + " Stars";
   }
 }
