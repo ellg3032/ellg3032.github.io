@@ -1,0 +1,76 @@
+header {
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+main {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+#search {
+  margin: 10px;
+  height: 25px;
+  width: 700px;
+  border-radius: 5px;
+  border-color: transparent;
+}
+#results {
+  display: flex;
+  border-radius: 10px;
+  border-color: #d3d3d3;
+  border-width: 1px;
+  border-style: solid;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 600px;
+  justify-self: center;
+  align-self: center;
+}
+.result {
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+}
+hr {
+  color:#d3d3d3;
+  border-top: 10px;
+}
+.infoimage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.yearruntimeratingmetascore {
+  display: flex;
+  flex-direction: row;
+}
+.datum {
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}
+.hidden {
+  display: none;
+}
+.shown {
+  display: block;
+}
+.poster {
+  width: 70px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
