@@ -57,7 +57,7 @@ main {
   width: 600px;
   justify-self: center;
   align-self: center;
-  margin-left: 350px;
+  margin-left: 20vw;
   margin-top: 20px;
 }
 .result {
@@ -117,7 +117,7 @@ hr {
 #titles {
   display: flex;
   flex-direction: row;
-  margin-left: 350px;
+  margin-left: 20vw;
   margin-top: 50px;
 }
 #titlebar {
@@ -130,4 +130,31 @@ hr {
 #titleh1 {
   font-size: 25px;
   margin: 0px;
+}
+@media (max-width: 800px) {
+  #searchbox{
+    width: 90vw;
+  }
+  #search{
+    width: 75vw;
+  }
+  #results{
+    margin-left: 10vw;
+  }
+  #titles{
+    margin-left: 10vw;
+  }
+}
+@media (max-width: 670px) {
+  #results{
+    margin-left: 10px;
+  }
+  #titles{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 620px) {
+  #results {
+    width: 80vh;
+  }
 }
