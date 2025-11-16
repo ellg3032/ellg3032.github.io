@@ -3,8 +3,6 @@ const endpoint2 = "http://www.omdbapi.com/?apikey=21b1bf27&t=";
 const button = document.querySelector("#searchbtn");
 
 const result1 = document.getElementById("result1");
-const result1children = result1.children[0].children[1].children[2].children[0];
-console.log(result1children);
 
 const result2 = document.getElementById("result2");
 
@@ -81,7 +79,6 @@ async function func() {
       }
       loadresults(json);
       showresults(json);
-      localStorage.setItem("current_poster", json["Search"][0]["Poster"]);
     }
   } catch (err) {
     console.log(err);
@@ -92,6 +89,12 @@ async function func() {
 function showresults(json) {
   document.getElementById("results").classList.add("shown");
   document.getElementById("results").classList.remove("hidden");
+  document.getElementById("titles").classList.add("shown");
+  document.getElementById("titles").classList.remove("hidden");
+  document.getElementById("titlebar").classList.add("shown");
+  document.getElementById("titlebar").classList.remove("hidden");
+  document.getElementById("titleh1").classList.add("shown");
+  document.getElementById("titleh1").classList.remove("hidden");
   for (let i = 0; i < 10; i++) {
     if (json["Search"][i]["Error"]) {
       results[i].classList.remove("shown");
@@ -106,8 +109,7 @@ function showresults(json) {
 function loadresults(json) {
   for (let i = 0; i < 10; i++) {
     results[i].children[0].children[0].src = json["Search"][i]["Poster"];
-    results[i].children[0].children[1].children[0].textContent =
-      json["Search"][i]["Title"];
+    results[i].children[0].children[1].children[0].children[0].textContent = json["Search"][i]["Title"];
     results[i].children[0].children[1].children[1].children[0].textContent =
       json["Search"][i]["Year"];
     results[i].children[0].children[1].children[1].children[2].textContent =
