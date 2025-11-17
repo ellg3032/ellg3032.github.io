@@ -1,4 +1,4 @@
-const endpoint = "http://www.omdbapi.com/?apikey=21b1bf27&t=";
+const endpoint = "https://www.omdbapi.com/?apikey=21b1bf27&t=";
 const button = document.querySelector("#please");
 const clear_storage = document.getElementById("clear_data");
 const img = document.getElementById("PosterImg");
