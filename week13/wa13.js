@@ -1,5 +1,5 @@
-const endpoint = "http://www.omdbapi.com/?apikey=21b1bf27&s=";
-const endpoint2 = "http://www.omdbapi.com/?apikey=21b1bf27&t=";
+const endpoint = "https://www.omdbapi.com/?apikey=21b1bf27&s=";
+const endpoint2 = "https://www.omdbapi.com/?apikey=21b1bf27&t=";
 const button = document.querySelector("#searchbtn");
 
 const result1 = document.getElementById("result1");
