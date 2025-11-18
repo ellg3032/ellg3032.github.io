@@ -1,10 +1,8 @@
-const endpoint = "http://www.omdbapi.com/?apikey=21b1bf27&s=";
-const endpoint2 = "http://www.omdbapi.com/?apikey=21b1bf27&t=";
+const endpoint = "https://www.omdbapi.com/?apikey=21b1bf27&s=";
+const endpoint2 = "https://www.omdbapi.com/?apikey=21b1bf27&t=";
 const button = document.querySelector("#searchbtn");
 
 const result1 = document.getElementById("result1");
-const result1children = result1.children[0].children[1].children[2].children[0];
-console.log(result1children);
 
 const result2 = document.getElementById("result2");
 
@@ -62,8 +60,8 @@ async function func() {
       throw Error(response.statusText);
     }
     const json = await response.json();
-    console.log("original json");
-    console.log(json);
+    //console.log("original json");
+    //console.log(json["Search"][3]);
     if (json["Error"]) {
       alert(json["Error"]);
     } else {
@@ -80,41 +78,68 @@ async function func() {
         json["Search"][i] = json2;
       }
       loadresults(json);
-      localStorage.setItem("current_poster", json["Search"][0]["Poster"]);
+      showresults(json);
     }
   } catch (err) {
     console.log(err);
     alert("Failed to get movie");
   }
-  showresults();
 }
 
-function showresults() {
-  for(let i = 0; i < 10; i++)
-  {
-    results[i].classList.add("shown");
-    results[i].classList.remove("hidden");
+function showresults(json) {
+  document.getElementById("results").classList.add("shown");
+  document.getElementById("results").classList.remove("hidden");
+  document.getElementById("titles").classList.add("shown");
+  document.getElementById("titles").classList.remove("hidden");
+  document.getElementById("titlebar").classList.add("shown");
+  document.getElementById("titlebar").classList.remove("hidden");
+  document.getElementById("titleh1").classList.add("shown");
+  document.getElementById("titleh1").classList.remove("hidden");
+  for (let i = 0; i < 10; i++) {
+    if (json["Search"][i]["Error"]) {
+      results[i].classList.remove("shown");
+      results[i].classList.add("hidden");
+    } else {
+      results[i].classList.add("shown");
+      results[i].classList.remove("hidden");
+    }
   }
 }
 
 function loadresults(json) {
-  console.log(json["Search"][0]);
   for (let i = 0; i < 10; i++) {
     results[i].children[0].children[0].src = json["Search"][i]["Poster"];
-    results[i].children[0].children[1].children[0].textContent = json["Search"][i]["Title"];
-    results[i].children[0].children[1].children[1].children[0].textContent = json["Search"][i]["Year"];
-    results[i].children[0].children[1].children[1].children[2].textContent = json["Search"][i]["Rated"];
+    results[i].children[0].children[1].children[0].children[0].textContent = json["Search"][i]["Title"];
+    results[i].children[0].children[1].children[1].children[0].textContent =
+      json["Search"][i]["Year"];
+    results[i].children[0].children[1].children[1].children[2].textContent =
+      json["Search"][i]["Rated"];
     if (json["Search"][i]["Type"] == "series") {
-      console.log("this is a series");
-      results[i].children[0].children[1].children[1].children[3].textContent = "TV Series";
-      results[i].children[0].children[1].children[1].children[1].classList.add("hidden");
-      results[i].children[0].children[1].children[1].children[1].classList.remove("shown");
+      results[i].children[0].children[1].children[1].children[3].textContent =
+        "TV Series";
+      results[i].children[0].children[1].children[1].children[1].classList.add(
+        "hidden"
+      );
+      results[
+        i
+      ].children[0].children[1].children[1].children[1].classList.remove(
+        "shown"
+      );
     } else {
-      results[i].children[0].children[1].children[1].children[3].textContent = json["Search"][i]["Metascore"] + " Metascore";
-      results[i].children[0].children[1].children[1].children[1].classList.add("shown");
-      results[i].children[0].children[1].children[1].children[1].classList.remove("hidden");
-      results[i].children[0].children[1].children[1].children[1].textContent = json["Search"][i]["Runtime"];
+      results[i].children[0].children[1].children[1].children[3].textContent =
+        json["Search"][i]["Metascore"] + " Metascore";
+      results[i].children[0].children[1].children[1].children[1].classList.add(
+        "shown"
+      );
+      results[
+        i
+      ].children[0].children[1].children[1].children[1].classList.remove(
+        "hidden"
+      );
+      results[i].children[0].children[1].children[1].children[1].textContent =
+        json["Search"][i]["Runtime"];
     }
-    results[i].children[0].children[1].children[2].children[0].textContent = json["Search"][i]["imdbRating"] + " Stars";
+    results[i].children[0].children[1].children[2].children[0].textContent =
+      json["Search"][i]["imdbRating"] + " Stars";
   }
 }
