@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+#thermometer_button {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  padding: 10px;
+  z-index: 400;
+}
+
+#radar_button {
+  position: absolute;
+  top: 210px;
+  right: 20px;
+  padding: 10px;
+  z-index: 400;
+}
+
+#confirm_button {
+  position: absolute;
+  top: 210px;
+  right: 20px;
+  padding: 10px;
+  z-index: 400;
+}
+
+#hide_radius {
+  position: absolute;
+  top: 270px;
+  right: 20px;
+  padding: 10px;
+  z-index: 400;
+}

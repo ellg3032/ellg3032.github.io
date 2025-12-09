@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css.css" />
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <div class="nav-brand">Jet Lag The Game</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu hide">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="map.html">Game Map</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="#contact">Messaging</a></li>
+      </ul>
+    </nav>
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <button id="thermometer_button" onClick="thermometer()">Thermometer</button>
+    <button id="radar_button" onClick="radar()">Radar</button>
+    <button id="confirm_button" style="display: none">Confirm?</button>
+    <button id="hide_radius" onClick="changeHideRadius()">
+      Hiding Radius: 0.25 Miles
+    </button>
+  </body>
+</html>
